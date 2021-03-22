@@ -448,6 +448,9 @@
             </ul>
         </div>
     </nav>
+    @php
+        dd($data2, $userInput);
+    @endphp
     <div class="">
         <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
@@ -657,7 +660,9 @@
                 <div>
                     <br>
                     <h4 class="my-0 font-weight-normal">Basket</h4>
-                    <p><strong>No of Adults:</strong> 1</p>
+                    <p><strong>No of Adults:</strong> 
+                    {{ $userInput['adult_no'] }}
+                    </p>
                     <hr>
                     <p><strong>{{$userInput['from']}} to {{$userInput['to']}} Flight No:</strong> P47126</p>
                     <p><strong>Departure Time: </strong>{{$userInput['depart']}}</p>

@@ -56,6 +56,7 @@ Route::get('/select', function () {
 });
 Route::get('/dashboard', [Dashboard::class, 'index']);
 Route::get('/booking', [AirpeaceSelectTablesController::class, 'index']);
+
 Route::post('/booking', [Booking::class, 'index']);
 Route::get('/register', [Registration::class, 'register']);
 Route::post('/register', [Registration::class, 'register_me']);

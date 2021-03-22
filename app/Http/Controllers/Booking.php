@@ -17,7 +17,8 @@ class Booking extends Controller
         //$userInput = $req->input();
         // $userInput = json_encode($userInput);
         // dd($userInput);
-
-        return view('booking',  ['userInput' => $userInput]);
+        // $airpeace_controller = new AirpeaceSelectTablesController();
+        // $airpeace_controller->index($userInput);
+        return redirect('booking')->with('user_input', $userInput);
     }
 }

@@ -50,6 +50,10 @@
         @foreach($data2 as $data3)
         <p>{{ $data3['name']}}</p>
         @endforeach
+
+        @foreach ($collection as $item)
+            
+        @endforeach
           <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
                 <a class="navbar-brand" href="/"><img src="1536056986logo.png" width="50%;"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
@@ -75,6 +79,10 @@
                 </ul>
                 </div>
           </nav>
+
+          @php
+            //   dd($data2);
+          @endphp
           <div class="">
             <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
