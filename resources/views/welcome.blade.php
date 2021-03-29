@@ -222,16 +222,16 @@
                           <div class="col-md-4 mb-3">
                             <label for="adult">Adult (+12yrs)</label>
                             <select class="custom-select d-block w-100" name="adult_no" id="adult" required="">
-                              <option value="">Choose...</option>
-                              <option>1 Adult</option>
-                              <option>2 Adults</option>
-                              <option>3 Adults</option>
-                              <option>4 Adults</option>
-                              <option>5 Adults</option>
-                              <option>6 Adults</option>
-                              <option>7 Adults</option>
-                              <option>8 Adults</option>
-                              <option>9 Adults</option>
+                              <option value="0">Choose...</option>
+                              <option value="1">1 Adult</option>
+                              <option value="2">2 Adults</option>
+                              <option value="3">3 Adults</option>
+                              <option value="4">4 Adults</option>
+                              <option value="5">5 Adults</option>
+                              <option value="6">6 Adults</option>
+                              <option value="7">7 Adults</option>
+                              <option value="8">8 Adults</option>
+                              <option value="9">9 Adults</option>
                             </select>
                             <div class="invalid-feedback">
                               Please select a valid number.
@@ -240,14 +240,14 @@
                           <div class="col-md-4 mb-3">
                             <label for="child">Children (2-11yrs)</label>
                             <select class="custom-select d-block w-100" name="child_no" id="child" required="">
-                              <option value="">Choose...</option>
-                              <option>0 Child</option>
-                              <option>1 Child</option>
-                              <option>2 Children</option>
-                              <option>3 Children</option>
-                              <option>4 Children</option>
-                              <option>5 Children</option>
-                              <option>6 Children</option>
+                              <option value="0">Choose...</option>
+                              <option value="0">0 Child</option>
+                              <option value="1">1 Child</option>
+                              <option value="2">2 Children</option>
+                              <option value="3">3 Children</option>
+                              <option value="4">4 Children</option>
+                              <option value="5">5 Children</option>
+                              <option value="6">6 Children</option>
                             </select>
                             <div class="invalid-feedback">
                               Please provide a valid number.
@@ -256,14 +256,14 @@
                           <div class="col-md-4 mb-3">
                             <label for="infants">Infants (<2yrs) </label>
                             <select class="custom-select d-block w-100" name="infants_no" id="infants" required="">
-                              <option value="">Choose...</option>
-                              <option>0 Infant</option>
-                              <option>1 Infant</option>
-                              <option>2 Infants</option>
-                              <option>3 Infants</option>
-                              <option>4 Infants</option>
-                              <option>5 Infants</option>
-                              <option>6 Infants</option>
+                              <option value="0">Choose...</option>
+                              <option value="0">0 Infant</option>
+                              <option value="1">1 Infant</option>
+                              <option value="2">2 Infants</option>
+                              <option value="3">3 Infants</option>
+                              <option value="4">4 Infants</option>
+                              <option value="5">5 Infants</option>
+                              <option value="6">6 Infants</option>
                             </select>
                             <div class="invalid-feedback">
                               Please provide a valid number.

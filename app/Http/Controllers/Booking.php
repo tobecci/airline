@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 class Booking extends Controller
 {
     //
-     public function index(Type $var = null, Request $req)
+     public function index(Type $var = null, Request $request)
     {
         # code...
-        $userInput = $req->input();
+        $userInput = $request->input();
         //$req->session()->get('user');
        //$userInput= $req->session()->all();
       //  print_r($userInput);
@@ -19,6 +19,7 @@ class Booking extends Controller
         // dd($userInput);
         // $airpeace_controller = new AirpeaceSelectTablesController();
         // $airpeace_controller->index($userInput);
-        return redirect('booking')->with('user_input', $userInput);
+        $request->session()->put('user_input', $userInput);
+        return redirect('booking');
     }
 }

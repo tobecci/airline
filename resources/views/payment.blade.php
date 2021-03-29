@@ -52,17 +52,17 @@
                     <h1>PayGate</h1>
                     <div class="card mb-4 shadow-sm">
                         <div class="card-header">
-                         <h3 class="my-0 font-weight-normal">NAOMITOYO7@GMAIL.COM</h3>
+                         <h3 class="my-0 font-weight-normal">{{$data["passengers"][0]["email_address"]}}</h3>
                         </div>
                         <div class="card-body">
-                            <p>Dear customer you're making payments to</p>
+                            <p>Dear {{$data["passengers"][0]["first_name"]}} you're making payments to</p>
                                 <h5>AIR PEACE</h5><br><br>
                             <p>Payment for</p>
-                            <h5>AMV2SG plus=N=2,000.00 processing fees</h5><br><br>
+                            <h5>Flight No: {{$data["flightNo"]}}</h5><br><br>
                             <div class="col-sm-8">
                                 <aside style="width:100%; padding-left:20%; margin-left:55%; float:left; background-color:lightgray;">
-                                    <p>Payment Ref: 20210120170352XqT</p>
-                                    <p>Order ID: 82960037012175AMV2SG</p>
+                                    <p>Payment Ref: {{$data["paymentId"]}}</p>
+                                    <p>Order ID: {{$data["orderId"]}}</p>
                                 </aside>
                             </div>
                         </div>    
@@ -129,7 +129,7 @@
                                     <div class="col">
                                     </div>
                                     <div class="col">
-                                        <a class="btn btn-lg btn-secondary" href="/summary">
+                                        <a class="btn btn-lg btn-secondary" href="{{url('/summary')}}">
                                             Proceed
                                          <i class="fas fa-caret-right" style="display: inline-block; font-family: 'Font Awesome 5 Free';font-weight: 900; font-style:normal; background-color:lightgrayfont-variant: normal;text-rendering: auto;line-height: 1;"></i>
                                         </a>
@@ -143,13 +143,31 @@
                 </div>
             </div>
             <div class="col-md-2" >              
-                <h5 style="text-align:center; background-color:black; color:white; text-size:80px;">=N=144,700.00</h5>
+                <h5 style="text-align:center; background-color:black; color:white; text-size:80px;">=N= 
+                    @php
+                        $passengerCount = count($data["passengers"]);
+                    @endphp
+                    <span id="formTotal" data-count="{{$passengerCount}}">
+                        {{$data["formTotal"]}}</span>
+                </h5>
             </div>
         </div>
          
     </body>
+<script src="{{url("/js/currency.min.js")}}"></script>
 <script src="/bootstrap/jquery.js"></script>
 <script type="text/javascript" src="/bootstrap/js/popper.js"></script>
 <script src="/bootstrap/bootstrap.js"></script>
+<script>
+    // scripts added by tobecci
+    let formTotal = document.querySelector("#formTotal");
+    let totalPassengers = formTotal.getAttribute("data-count");
+    let totalPrice = formTotal.innerHTML;
+    totalPrice = currency(totalPrice,{"symbol":""}).multiply(totalPassengers).format();
+    formTotal.innerHTML = totalPrice;
+    console.log(totalPrice,totalPassengers);
+    // console.log(uuidv4());
+
+</script>
 
 </html>

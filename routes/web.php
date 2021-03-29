@@ -30,9 +30,8 @@ Route::get('/login', function () {
 Route::get('/naomi', function () {
     return view('naoh');
 });
-Route::get('/payment', function () {
-    return view('payment');
-});
+Route::post('/payment', [AirpeaceSelectTablesController::class, 'payment']);
+Route::get('/summary', [AirpeaceSelectTablesController::class, 'summary']);
 Route::get('/advantage', function () {
     return view('advantage');
 }); 
