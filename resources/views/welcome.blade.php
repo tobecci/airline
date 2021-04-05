@@ -418,7 +418,10 @@
     $('#arr').slideDown();
   });
   $('.one_btn').click(function(){
+    let arrive = document.querySelector("#datepicker2");
+    arrive.value = null;
     $('#arr').slideUp();
+
     // $('<h1>hg</h1>').prependTo('#bookingform');
   });
 </script>

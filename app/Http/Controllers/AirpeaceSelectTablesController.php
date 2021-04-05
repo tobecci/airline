@@ -46,12 +46,25 @@ class AirpeaceSelectTablesController extends Controller
         $userInput["formTotal"] = $form_input["formTotal"];
         $userInput["flightNo"] = $form_input["flightNo"];
         $userInput["flightDuration"] = $form_input["flightDuration"];
+        $userInput["totalFare"] = $form_input["totalFare"];
+
+        $userInput["formInboundDeparture"] = $form_input["formInboundDeparture"];
+        $userInput["formInboundArrival"] = $form_input["formInboundArrival"];
+        $userInput["formInboundFlightType"] = $form_input["formInboundFlightType"];
+        $userInput["formInboundPrice"] = $form_input["formInboundPrice"];
+        $userInput["formTax"] = $form_input["formInboundTax"];
+        $userInput["formInboundTotal"] = $form_input["formInboundTotal"];
+        $userInput["flightInboundNo"] = $form_input["flightInboundNo"];
+        $userInput["flightInboundDuration"] = $form_input["flightInboundDuration"];
+        $userInput["totalInboundFare"] = $form_input["totalInboundFare"];
+        $userInput["accumulatedFare"] = $form_input["accumulatedFare"];
+        
         $userInput["passengers"] = $filtered_input;
         $userInput["paymentId"] = "PAY-".uniqid();
         $userInput["orderId"] = "ORDER-".uniqid();
         $request->session()->put("user_input",$userInput);
 
-        // dd("payment page");
+        // dump("payment page");
         // dump($request->input(),$filtered_input,$userInput);
         return view('payment',["data" => $userInput]);
     }

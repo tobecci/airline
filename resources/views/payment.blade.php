@@ -148,7 +148,7 @@
                         $passengerCount = count($data["passengers"]);
                     @endphp
                     <span id="formTotal" data-count="{{$passengerCount}}">
-                        {{$data["formTotal"]}}</span>
+                        {{$data["accumulatedFare"]}}</span>
                 </h5>
             </div>
         </div>
@@ -160,12 +160,12 @@
 <script src="/bootstrap/bootstrap.js"></script>
 <script>
     // scripts added by tobecci
-    let formTotal = document.querySelector("#formTotal");
-    let totalPassengers = formTotal.getAttribute("data-count");
-    let totalPrice = formTotal.innerHTML;
-    totalPrice = currency(totalPrice,{"symbol":""}).multiply(totalPassengers).format();
-    formTotal.innerHTML = totalPrice;
-    console.log(totalPrice,totalPassengers);
+    // let formTotal = document.querySelector("#formTotal");
+    // let totalPassengers = formTotal.getAttribute("data-count");
+    // let totalPrice = formTotal.innerHTML;
+    // totalPrice = currency(totalPrice,{"symbol":""}).multiply(totalPassengers).format();
+    // formTotal.innerHTML = totalPrice;
+    // console.log(totalPrice,totalPassengers);
     // console.log(uuidv4());
 
 </script>

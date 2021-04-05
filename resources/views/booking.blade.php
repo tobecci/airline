@@ -602,15 +602,16 @@
                                 <label for="adult">Adult (+12yrs)</label>
                                 <select class="custom-select d-block w-100" id="adult" name="adult_no" required="">
                                     <option value="">Choose...</option>
-                                    <option <?php echo ($userInput['adult_no'] == '1 Adult') ? "selected" : ""; ?>>1 Adult</option>
-                                    <option <?php echo ($userInput['adult_no'] == '2 Adults') ? "selected" : ""; ?>>2 Adults</option>
-                                    <option <?php echo ($userInput['adult_no'] == '3 Adults') ? "selected" : ""; ?>>3 Adults</option>
-                                    <option <?php echo ($userInput['adult_no'] == '4 Adults') ? "selected" : ""; ?>>4 Adults</option>
-                                    <option <?php echo ($userInput['adult_no'] == '5 Adults') ? "selected" : ""; ?>>5 Adults</option>
-                                    <option <?php echo ($userInput['adult_no'] == '6 Adults') ? "selected" : ""; ?>>6 Adults</option>
-                                    <option <?php echo ($userInput['adult_no'] == '7 Adults') ? "selected" : ""; ?>>7 Adults</option>
-                                    <option <?php echo ($userInput['adult_no'] == '8 Adults') ? "selected" : ""; ?>>8 Adults</option>
-                                    <option <?php echo ($userInput['adult_no'] == '9 Adults') ? "selected" : ""; ?>>9 Adults</option>
+                                    <option @if($userInput["adult_no"] == "0") selected @endif  value="0">0 Adult</option>
+                                    <option @if($userInput["adult_no"] == "1") selected @endif value="1">1 Adult</option>
+                                    <option @if($userInput["adult_no"] == "2") selected @endif  value="2">2 Adults</option>
+                                    <option @if($userInput["adult_no"] == "3") selected @endif  value="3">3 Adults</option>
+                                    <option @if($userInput["adult_no"] == "4") selected @endif  value="4">4 Adults</option>
+                                    <option @if($userInput["adult_no"] == "5") selected @endif  value="5">5 Adults</option>
+                                    <option @if($userInput["adult_no"] == "6") selected @endif  value="6">6 Adults</option>
+                                    <option @if($userInput["adult_no"] == "7") selected @endif  value="7">7 Adults</option>
+                                    <option @if($userInput["adult_no"] == "8") selected @endif  value="8">8 Adults</option>
+                                    <option @if($userInput["adult_no"] == "9") selected @endif  value="9">9 Adults</option>
                                 </select>
                                 <div class="invalid-feedback">
                                     Please select a valid country.
@@ -620,13 +621,13 @@
                                 <label for="child_no">Children (2-11yrs)</label>
                                 <select class="custom-select d-block w-100" id="child_no" name="child_no">
                                     <option value="">Choose...</option>
-                                    <option <?php echo ($userInput['child_no'] == '0 Child') ? "selected" : ""; ?>>0 Child</option>
-                                    <option <?php echo ($userInput['child_no'] == '1 Child') ? "selected" : ""; ?>>1 Child</option>
-                                    <option <?php echo ($userInput['child_no'] == '2 Children') ? "selected" : ""; ?>>2 Children</option>
-                                    <option <?php echo ($userInput['child_no'] == '3 Children') ? "selected" : ""; ?>>3 Children</option>
-                                    <option <?php echo ($userInput['child_no'] == '4 Children') ? "selected" : ""; ?>>4 Children</option>
-                                    <option <?php echo ($userInput['child_no'] == '5 Children') ? "selected" : ""; ?>>5 Children</option>
-                                    <option <?php echo ($userInput['child_no'] == '6 Children') ? "selected" : ""; ?>>6 Children</option>
+                                    <option <?php echo ($userInput['child_no'] == '0') ? "selected" : ""; ?> value="0">0 Child</option>
+                                    <option <?php echo ($userInput['child_no'] == '1') ? "selected" : ""; ?> value="1">1 Child</option>
+                                    <option <?php echo ($userInput['child_no'] == '2') ? "selected" : ""; ?> value="2">2 Children</option>
+                                    <option <?php echo ($userInput['child_no'] == '3') ? "selected" : ""; ?> value="3">3 Children</option>
+                                    <option <?php echo ($userInput['child_no'] == '4') ? "selected" : ""; ?> value="4">4 Children</option>
+                                    <option <?php echo ($userInput['child_no'] == '5') ? "selected" : ""; ?> value="5">5 Children</option>
+                                    <option <?php echo ($userInput['child_no'] == '6') ? "selected" : ""; ?> value="6">6 Children</option>
                                 </select>
                                 <div class="invalid-feedback">
                                     Please provide a valid state.
@@ -635,13 +636,13 @@
                             <div>
                                 <label for="state">Infants(<2yrs)</label> <select class="custom-select d-block w-100" id="state" name="infants_no">
                                         <option value="">Choose...</option>
-                                        <option <?php echo ($userInput['infants_no'] == '0 Infant') ? "selected" : ""; ?>>0 Infant</option>
-                                        <option <?php echo ($userInput['infants_no'] == '1 Infant') ? "selected" : ""; ?>>1 Infant</option>
-                                        <option <?php echo ($userInput['infants_no'] == '2 Infants') ? "selected" : ""; ?>>2 Infants</option>
-                                        <option <?php echo ($userInput['infants_no'] == '3 Infants') ? "selected" : ""; ?>>3 Infants</option>
-                                        <option <?php echo ($userInput['infants_no'] == '4 Infants') ? "selected" : ""; ?>>4 Infants</option>
-                                        <option <?php echo ($userInput['infants_no'] == '5 Infants') ? "selected" : ""; ?>>5 Infants</option>
-                                        <option <?php echo ($userInput['infants_no'] == '6 Infants') ? "selected" : ""; ?>>6 Infants</option>
+                                        <option <?php echo ($userInput['infants_no'] == '0') ? "selected" : ""; ?> value="0">0 Infant</option>
+                                        <option <?php echo ($userInput['infants_no'] == '1') ? "selected" : ""; ?> value="1">1 Infant</option>
+                                        <option <?php echo ($userInput['infants_no'] == '2') ? "selected" : ""; ?> value="2">2 Infants</option>
+                                        <option <?php echo ($userInput['infants_no'] == '3') ? "selected" : ""; ?> value="3">3 Infants</option>
+                                        <option <?php echo ($userInput['infants_no'] == '4') ? "selected" : ""; ?> value="4">4 Infants</option>
+                                        <option <?php echo ($userInput['infants_no'] == '5') ? "selected" : ""; ?> value="5">5 Infants</option>
+                                        <option <?php echo ($userInput['infants_no'] == '6') ? "selected" : ""; ?> value="6">6 Infants</option>
                                         </select>
                                         <div class="invalid-feedback">
                                             Please provide a valid state.
@@ -660,26 +661,55 @@
                     <p><strong>No of Adults:</strong> 
                     {{ $userInput['adult_no'] }}
                     </p>
+                    <p><strong>No of Children:</strong> 
+                    {{ $userInput['child_no'] }}
+                    </p>
+                    <p><strong>No of Infants:</strong> 
+                    {{ $userInput['infants_no'] }}
+                    </p>
                     <hr>
-                    <p><strong>{{$userInput['from']}} to {{$userInput['to']}} Flight No:</strong> <span id="sidebar--flightNo">P47126</span> </p>
-                    <p><strong>Departure Time: </strong><span id="sidebar--departure">{{$userInput['depart']}}</span></p>
-                    @if($userInput['arrival'] !='')
-                    <p><strong>Arrival Time: </strong><span id="sidebar--arrival">{{$userInput['arrival']}}</span></p>
-                    @elseif($userInput['arrival'] =='')
-                    <p><strong>Arrival Time: </strong><span id="sidebar--arrival"></span></p>
-                    @endif
-                    <p><strong>Fare Type: </strong><span id="sidebar--fare-type">Economy Flexi Domestic</span></p>
-                    <p><strong>Duration: </strong><span id="sidebar--duration">1hr 30mins</span></p>
-                    <p><strong>Net Fare: </strong><span id="sidebar--price">37,000.00</span>NGN</p>
-                    <p><strong>Inc Tax: </strong><span id="sidebar--tax">23,000.00</span>NGN</p>
-                    <p><strong>Total Fare: </strong><span id="sidebar--total">60,000.00</span>NGN</p>
-                    <hr>
-                    <h4>Summary:</h4>
-                    <p><strong>Flights Total: </strong><span id="sidebar--total1">140,000</span>NGN</p>
-                    {{-- <p><strong>Amount outstanding</strong></p>
-                    <h3>140,000.00 NGN</h3> --}}
+                    
+                    <div class="outbound">
+                        <h4 class="my-2 font-weight-normal">OUTBOUND</h4>
+                        <p><strong>{{$userInput['from']}} to {{$userInput['to']}} Flight No:</strong> <span id="sidebar--flightNo">P47126</span> </p>
+                        <p><strong>Departure Time: </strong><span id="sidebar--departure">{{$userInput['depart']}}</span></p>
+                        @if($userInput['arrival'] !='')
+                        <p><strong>Arrival Time: </strong><span id="sidebar--arrival">{{$userInput['arrival']}}</span></p>
+                        @elseif($userInput['arrival'] =='')
+                        <p><strong>Arrival Time: </strong><span id="sidebar--arrival"></span></p>
+                        @endif
+                        <p><strong>Fare Type: </strong><span id="sidebar--fare-type">Economy Flexi Domestic</span></p>
+                        <p><strong>Duration: </strong><span id="sidebar--duration">1hr 30mins</span></p>
+                        <p><strong>Net Fare: </strong><span id="sidebar--price">37,000.00</span>NGN</p>
+                        <p><strong>Inc Tax: </strong><span id="sidebar--tax">23,000.00</span>NGN</p>
+                        <p><strong>Total Fare: </strong><span id="sidebar--total">60,000.00</span>NGN</p>
+                        <hr>
+                        <h4>Summary:</h4>
+                        <p><strong>Flights Total: </strong><span id="sidebar--total1">140,000</span>NGN</p>
+                        <br>
+                    </div>
 
-                    <br>
+                    @if ($userInput["arrival"])
+                    <div id="inbound-flight" class="inbound">
+                        <h4 class="my-2 font-weight-normal">INBOUND</h4>
+                        <p><strong>{{$userInput['to']}} to {{$userInput['from']}} Flight No:</strong> <span id="sidebar--inbound--flightNo">P47126</span> </p>
+                        <p><strong>Departure Time: </strong><span id="sidebar--inbound--departure">{{$userInput['depart']}}</span></p>
+                        @if($userInput['arrival'] !='')
+                        <p><strong>Arrival Time: </strong><span id="sidebar--inbound--arrival">{{$userInput['arrival']}}</span></p>
+                        @elseif($userInput['arrival'] =='')
+                        <p><strong>Arrival Time: </strong><span id="sidebar--inbound--arrival"></span></p>
+                        @endif
+                        <p><strong>Fare Type: </strong><span id="sidebar--inbound--fare-type">Economy Flexi Domestic</span></p>
+                        <p><strong>Duration: </strong><span id="sidebar--inbound--duration">1hr 30mins</span></p>
+                        <p><strong>Net Fare: </strong><span id="sidebar--inbound--price">37,000.00</span>NGN</p>
+                        <p><strong>Inc Tax: </strong><span id="sidebar--inbound--tax">23,000.00</span>NGN</p>
+                        <p><strong>Total Fare: </strong><span id="sidebar--inbound--total">60,000.00</span>NGN</p>
+                        <hr>
+                        <h4>Summary:</h4>
+                        <p><strong>Flights Total: </strong><span id="sidebar--inbound--total1">140,000</span>NGN</p>
+                        <br>
+                    </div>
+                    @endif
                 </div>
                 <div>
                     <br>
@@ -1613,7 +1643,7 @@
                             <br>
 
                             @if($userInput['arrival'] !='')
-                            <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-content inbound" id="nav-tabContent">
                                 <div class="tab-pane fade  show active" id="nav-select" role="tabpanel" aria-labelledby="nav-select-tab">
                                     <div class="card">
                                         <h5 class="card-header">Inbound: {{$userInput['to']}} to {{$userInput['from']}}</h5>
@@ -2506,66 +2536,71 @@
                     <div id="tabs-2">
 
                         <div>
-                            <div class="card-deck mb-3 text-center">
+                            <div class="card-deck mb-3">
                                 <div class="card mb-4 shadow-sm">
                                     <div class="card-header">
-                                        <h4 class="my-0 font-weight-normal" style="text-align:left; font-size:20px;">Total Flight Price</h4>
+                                        <h4 class="my-0 font-weight-normal" style="text-align:left; font-size:20px;">General Flight info</h4>
                                     </div>
                                     <div class="card-body">
-                                        <table class="table table-sm" style="font-size:11px">
-                                            <h6 style="text-align:left" style="font-size:11px">(including passenger discount breakdown)<h6>
-                                                    <thead>
-                                                        <tr>
-                                                            <th scope="col">Passengers</th>
-                                                            <th scope="col">QTY</th>
-                                                            <th scope="col">Fare</th>
-                                                            <th scope="col">Tax + Fee</th>
-                                                            <th scope="col">Total</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <th scope="row">Adult</th>
-                                                            <td>1</td>
-                                                            <td>84500 NGN</td>
-                                                            <td>55500 NGN</td>
-                                                            <td>140000 NGN</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th scope="row">Child</th>
-                                                            <td>2</td>
-                                                            <td>150600 NGN</td>
-                                                            <td>110000 NGN</td>
-                                                            <td>260600 NGN</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th scope="row">Infant</th>
-                                                            <td>1</td>
-                                                            <td>8500 NGN</td>
-                                                            <td>2500 NGN</td>
-                                                            <td>11000 NGN</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th scope="row">Total Price</th>
-                                                            <td></td>
-                                                            <td>243600 NGN</td>
-                                                            <td>168000 NGN</td>
-                                                            <td>411600 NGN</td>
-                                                        </tr>
-                                                    </tbody>
-                                        </table>
+                                        <h6>No of adults: {{$userInput["adult_no"]}}</h6>
+                                        <h6>No of Children: {{$userInput["child_no"]}}</h6>
+                                        <h6>No of Infants: {{$userInput["infants_no"]}}</h6>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        
                         <div class="card mb-4 shadow-sm">
                             <div class="card-header">
-                                <h4 class="my-0 font-weight-normal">Add Additional Items</h4>
+                                <h4 class="my-0 font-weight-normal">OUTBOUND</h4>
                             </div>
+                            
                             <div class="card-body">
-
+                                <p><strong>{{$userInput['from']}} to {{$userInput['to']}} Flight No:</strong> <span id="option--flightNo">P47126</span> </p>
+                                            <p><strong>Departure Time: </strong><span id="option--departure">{{$userInput['depart']}}</span></p>
+                                            @if($userInput['arrival'] !='')
+                                            <p><strong>Arrival Time: </strong><span id="option--arrival">{{$userInput['arrival']}}</span></p>
+                                            @elseif($userInput['arrival'] =='')
+                                            <p><strong>Arrival Time: </strong><span id="option--arrival"></span></p>
+                                            @endif
+                                            <p><strong>Fare Type: </strong><span id="option--fare-type">Economy Flexi Domestic</span></p>
+                                            <p><strong>Duration: </strong><span id="option--duration">1hr 30mins</span></p>
+                                            <p><strong>Net Fare: </strong><span id="option--price">37,000.00</span>NGN</p>
+                                            <p><strong>Inc Tax: </strong><span id="option--tax">23,000.00</span>NGN</p>
+                                            <p><strong>Total Fare: </strong><span id="option--total">60,000.00</span>NGN</p>
+                                            <hr>
+                                            <h4>Summary:</h4>
+                                            <p><strong>Flights Total: </strong><span id="option--total1">140,000</span>NGN</p>
+                                            <br>
                             </div>
                         </div>
+
+                        @if ($userInput["arrival"])
+                        <div class="card mb-4 shadow-sm option--inbound">
+                            <div class="card-header">
+                                <h4 class="my-0 font-weight-normal">INBOUND</h4>
+                            </div>
+                            
+                            <div class="card-body">
+                                <p><strong>{{$userInput['to']}} to {{$userInput['from']}} Flight No:</strong> <span id="option--inbound--flightNo">P47126</span> </p>
+                                            <p><strong>Departure Time: </strong><span id="option--inbound--departure">{{$userInput['depart']}}</span></p>
+                                            @if($userInput['arrival'] !='')
+                                            <p><strong>Arrival Time: </strong><span id="option--inbound--arrival">{{$userInput['arrival']}}</span></p>
+                                            @elseif($userInput['arrival'] =='')
+                                            <p><strong>Arrival Time: </strong><span id="option--inbound--arrival"></span></p>
+                                            @endif
+                                            <p><strong>Fare Type: </strong><span id="option--inbound--fare-type">Economy Flexi Domestic</span></p>
+                                            <p><strong>Duration: </strong><span id="option--inbound--duration">1hr 30mins</span></p>
+                                            <p><strong>Net Fare: </strong><span id="option--inbound--price">37,000.00</span>NGN</p>
+                                            <p><strong>Inc Tax: </strong><span id="option--inbound--tax">23,000.00</span>NGN</p>
+                                            <p><strong>Total Fare: </strong><span id="option--inbound--total">60,000.00</span>NGN</p>
+                                            <hr>
+                                            <h4>Summary:</h4>
+                                            <p><strong>Flights Total: </strong><span id="option--inbound--total1">140,000</span>NGN</p>
+                                            <br>
+                            </div>
+                        </div>
+                        @endif
 
 
                     </div>
@@ -2596,7 +2631,7 @@
                                                 <option>Hon</option>
                                                 <option>HRH</option>
                                                 <option>Miss</option>
-                                                <option>Mr</option>
+                                                <option selected>Mr</option>
                                                 <option>Mrs</option>
                                                 <option>Ms</option>
                                                 <option>Mstr</option>
@@ -3174,7 +3209,7 @@
                                                 <option>Hon</option>
                                                 <option>HRH</option>
                                                 <option>Miss</option>
-                                                <option>Mr</option>
+                                                <option selected>Mr</option>
                                                 <option>Mrs</option>
                                                 <option>Ms</option>
                                                 <option>Mstr</option>
@@ -3203,7 +3238,7 @@
                                     <div class="row">
                                         <div class="col-md-6 mb-3">
                                             <label for="date_of_birth">Date of Birth</label>
-                                            <input type="text" class="form-control" id="date_of_birth" name="date_of_birth-child-{{$i}}" placeholder="" value="" required>
+                                            <input type="date" class="form-control" id="date_of_birth" name="date_of_birth-child-{{$i}}" placeholder="" value="" required>
                         
                                         </div>
                                         <div class="col-md-6 mb-3">
@@ -3499,7 +3534,7 @@
                                                 <option>Hon</option>
                                                 <option>HRH</option>
                                                 <option>Miss</option>
-                                                <option>Mr</option>
+                                                <option selected>Mr</option>
                                                 <option>Mrs</option>
                                                 <option>Ms</option>
                                                 <option>Mstr</option>
@@ -3526,7 +3561,7 @@
                                     <div class="row">
                                         <div class="col-md-6 mb-3">
                                             <label for="date_of_birth">Date of Birth</label>
-                                            <input type="text" class="form-control" id="date_of_birth" name="date_of_birth-infant-{{$i}}" placeholder="" value="" required>
+                                            <input type="date" class="form-control" id="date_of_birth" name="date_of_birth-infant-{{$i}}" placeholder="" value="" required>
                                             
                                         </div>
                                         <div class="col-md-6 mb-3">
@@ -3802,6 +3837,8 @@
 
                         @endfor
                         {{-- carry relevant information --}}
+
+                        {{-- outbound flight --}}
                         <input type="text" name="formDeparture" value="" hidden>
                         <input type="text" name="formArrival" value="" hidden>
                         <input type="text" name="formFlightType" value="" hidden>
@@ -3810,7 +3847,23 @@
                         <input type="text" name="formTotal" value="" hidden>
                         <input type="text" name="flightNo" value="" hidden>
                         <input type="text" name="flightDuration" value="" hidden>
+                        <input type="text" name="totalFare" value="" hidden>
                         {{-- <input type="text" name="orderID" value="" hidden> --}}
+
+                        {{-- inbound flight --}}
+                        <input type="text" name="formInboundDeparture" value="" hidden>
+                        <input type="text" name="formInboundArrival" value="" hidden>
+                        <input type="text" name="formInboundFlightType" value="" hidden>
+                        <input type="text" name="formInboundPrice" value="" hidden>
+                        <input type="text" name="formInboundTax" value="" hidden>
+                        <input type="text" name="formInboundTotal" value="" hidden>
+                        <input type="text" name="flightInboundNo" value="" hidden>
+                        <input type="text" name="flightInboundDuration" value="" hidden>
+                        <input type="text" name="totalInboundFare" value="" hidden>
+
+
+                        <input type="text" name="accumulatedFare" value="" hidden>
+
                         <input type="submit" class="btn btn-info" value="Proceed To Payment">
                     </form>
                     </div>
@@ -3833,6 +3886,11 @@
 
         </div>
     </div>
+
+    {{-- hidden fields for storing data --}}
+    <input id="flightFrom" type="text" value="{{$userInput["from"]}}" hidden>
+    <input id="flightTo" type="text" value="{{$userInput["to"]}}" hidden>
+    <input id="totalPassengers" type="text" value="{{$userInput["adult_no"] + $userInput["child_no"] + $userInput["infants_no"]}}" hidden>
 </body>
 <script src="{{url("/js/currency.min.js")}}"></script>
 <script src="{{url("/js/uuidv4.min.js")}}"></script>
@@ -3908,7 +3966,10 @@
     };
 
     oneWayButton.addEventListener("click",(event)=> {
+        let arrival = document.querySelector("#datepicker2");
+        arrival.value = null;
         arrivalInput.style.display = "none";
+
     })
     returnButton.addEventListener("click",(event)=> {
         arrivalInput.style.display = "flex";
@@ -3917,14 +3978,16 @@
     priceButton.forEach((btn,index)=>{
         btn.addEventListener("click",(event)=>{
             //find the price
+            let from = document.querySelector("#flightFrom").value;
+            let to = document.querySelector("#flightTo").value;
             let price = btn.previousElementSibling.previousElementSibling.innerHTML;
             let tax = currency(price,{"symbol":""}).multiply(10/100).format();
             let total = currency(tax,{"symbol":""}).add(price).format();
-            
-
+            let totalPassengers = document.querySelector("#totalPassengers").value;
+            let totalFare = currency(total,{"symbol":""}).multiply(parseInt(totalPassengers)).format();
             let parentElement = btn.parentElement;
             let row = parentElement.parentElement;
-            // console.log(row);
+            console.log(row);
             //find the type of flight
             var index = 0;
             while ( (parentElement = parentElement.previousElementSibling) ) {
@@ -3935,25 +3998,113 @@
             let duration = row.children[1].children[0].innerHTML;
             let flightNo = row.children[1].children[2].innerHTML;
             let arrival = row.children[2].children[0].innerHTML;
-            document.querySelector("#sidebar--departure").innerHTML = departure;
-            document.querySelector("#sidebar--arrival").innerHTML = arrival;
-            document.querySelector("#sidebar--fare-type").innerHTML = flightType;
-            document.querySelector("#sidebar--flightNo").innerHTML = flightNo;
-            document.querySelector("#sidebar--duration").innerHTML = duration;
-            document.querySelector("#sidebar--price").innerHTML = price;
-            document.querySelector("#sidebar--tax").innerHTML = tax;
-            document.querySelector("#sidebar--total").innerHTML = total;
-            document.querySelector("#sidebar--total1").innerHTML = total;
+            let origin = row.children[0].children[2].innerHTML;
+
+            if(origin === from){
+                console.log("flight is outbound");
+
+                document.querySelector("#sidebar--departure").innerHTML = departure;
+                document.querySelector("#sidebar--arrival").innerHTML = arrival;
+                document.querySelector("#sidebar--fare-type").innerHTML = flightType;
+                document.querySelector("#sidebar--flightNo").innerHTML = flightNo;
+                document.querySelector("#sidebar--duration").innerHTML = duration;
+                document.querySelector("#sidebar--price").innerHTML = price;
+                document.querySelector("#sidebar--tax").innerHTML = tax;
+                document.querySelector("#sidebar--total").innerHTML = total;
+                document.querySelector("#sidebar--total1").innerHTML = totalFare;
+
+                // set options
+                document.querySelector("#option--departure").innerHTML = departure;
+                document.querySelector("#option--arrival").innerHTML = arrival;
+                document.querySelector("#option--fare-type").innerHTML = flightType;
+                document.querySelector("#option--flightNo").innerHTML = flightNo;
+                document.querySelector("#option--duration").innerHTML = duration;
+                document.querySelector("#option--price").innerHTML = price;
+                document.querySelector("#option--tax").innerHTML = tax;
+                document.querySelector("#option--total").innerHTML = total;
+                document.querySelector("#option--total1").innerHTML = totalFare;
+                
+                
+                document.querySelector('[name="formDeparture"]').value = departure;
+                document.querySelector('[name="formArrival"]').value = arrival;
+                document.querySelector('[name="formFlightType"]').value = flightType;
+                document.querySelector('[name="formPrice"]').value = price;
+                document.querySelector('[name="formTax"]').value = tax;
+                document.querySelector('[name="formTotal"]').value = total;
+                document.querySelector('[name="flightNo"]').value = flightNo;
+                document.querySelector('[name="flightDuration"]').value = duration;
+                document.querySelector('[name="totalFare"]').value = totalFare;
+
+            }
+
+            if(origin === to){
+                console.log("flight is inbound");
+
+                document.querySelector("#sidebar--inbound--departure").innerHTML = departure;
+                document.querySelector("#sidebar--inbound--arrival").innerHTML = arrival;
+                document.querySelector("#sidebar--inbound--fare-type").innerHTML = flightType;
+                document.querySelector("#sidebar--inbound--flightNo").innerHTML = flightNo;
+                document.querySelector("#sidebar--inbound--duration").innerHTML = duration;
+                document.querySelector("#sidebar--inbound--price").innerHTML = price;
+                document.querySelector("#sidebar--inbound--tax").innerHTML = tax;
+                document.querySelector("#sidebar--inbound--total").innerHTML = total;
+                document.querySelector("#sidebar--inbound--total1").innerHTML = totalFare;
+
+                //set options
+                document.querySelector("#option--inbound--departure").innerHTML = departure;
+                document.querySelector("#option--inbound--arrival").innerHTML = arrival;
+                document.querySelector("#option--inbound--fare-type").innerHTML = flightType;
+                document.querySelector("#option--inbound--flightNo").innerHTML = flightNo;
+                document.querySelector("#option--inbound--duration").innerHTML = duration;
+                document.querySelector("#option--inbound--price").innerHTML = price;
+                document.querySelector("#option--inbound--tax").innerHTML = tax;
+                document.querySelector("#option--inbound--total").innerHTML = total;
+                document.querySelector("#option--inbound--total1").innerHTML = totalFare;
+                
+                
+                // console.log(departure, arrival, flightType, flightNo, duration, price, tax, total);
+
+                console.log({
+                    departure: departure,
+                    arrival: arrival,
+                    flightType: flightType,
+                    flightNo: flightNo,
+                    duration: duration,
+                    price: price,
+                    tax: tax,
+                    total: total,
+                });
+                
+                document.querySelector('[name="formInboundDeparture"]').value = departure;
+                document.querySelector('[name="formInboundArrival"]').value = arrival;
+                document.querySelector('[name="formInboundFlightType"]').value = flightType;
+                document.querySelector('[name="formInboundPrice"]').value = price;
+                document.querySelector('[name="formInboundTax"]').value = tax;
+                document.querySelector('[name="formInboundTotal"]').value = total;
+                document.querySelector('[name="flightInboundNo"]').value = flightNo;
+                document.querySelector('[name="flightInboundDuration"]').value = duration;
+                document.querySelector('[name="totalInboundFare"]').value = totalFare;
+
+            }
+
+            // console.log(from,to,origin);
+
+            // get the total of inbound and outbound
+            if(document.querySelector("#inbound-flight")){
+            let totalInboundFare = document.querySelector('[name="totalInboundFare"]').value;
+            let totalOutboundFare = document.querySelector('[name="totalFare"]').value;
+            let accumulatedFare = currency(totalInboundFare,{"symbol":""}).add(totalOutboundFare).format();
+            document.querySelector('[name="accumulatedFare"]').value = accumulatedFare;
+            
+            console.log({accumulatedFare:accumulatedFare});
+            } else{
+            let accumulatedFare = document.querySelector('[name="totalFare"]').value;
+            document.querySelector('[name="accumulatedFare"]').value = accumulatedFare;
+            console.log({accumulatedFare:accumulatedFare});
+            }
+            console.log({from:from, to:to});
             
             
-            document.querySelector('[name="formDeparture"]').value = departure;
-            document.querySelector('[name="formArrival"]').value = arrival;
-            document.querySelector('[name="formFlightType"]').value = flightType;
-            document.querySelector('[name="formPrice"]').value = price;
-            document.querySelector('[name="formTax"]').value = tax;
-            document.querySelector('[name="formTotal"]').value = total;
-            document.querySelector('[name="flightNo"]').value = flightNo;
-            document.querySelector('[name="flightDuration"]').value = duration;
         });
     })
 
@@ -3967,7 +4118,6 @@
             let flightNo = document.querySelector("#sidebar--flightNo").innerHTML;
             let duration = document.querySelector("#sidebar--duration").innerHTML;
 
-
             document.querySelector('[name="formDeparture"]').value = departure
             document.querySelector('[name="formArrival"]').value = arrival
             document.querySelector('[name="formFlightType"]').value = flightType
@@ -3976,7 +4126,6 @@
             document.querySelector('[name="formTotal"]').value = total
             document.querySelector('[name="flightNo"]').value = flightNo;
             document.querySelector('[name="flightDuration"]').value = duration;
-
     }
     fillFlightInfo();
     console.log(uuidv4());
